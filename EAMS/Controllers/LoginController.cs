@@ -20,9 +20,9 @@ namespace EAMS.Controllers
         // GET api/<LoginController>/5
         //[HttpGet("{Username}/{Password}")]
         [HttpGet]
-        public ActionResult Login(LoginModel login)
+        public ActionResult Login(string Username, string Password)
         {
-            if(login.Username.ToLower() == "minesh" || login.Password == "minesh")
+            if(Username.ToLower() == "minesh" || Password == "minesh")
             {
                 return Ok("Login Successfull");
             }
